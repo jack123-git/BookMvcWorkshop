@@ -138,7 +138,7 @@
                                     <option value="@item.USER_ID">@item.USER_ENAME-@item.USER_CNAME</option>
                                 }
                             </select>
-                            <span class="text-danger" asp-validation-for="BOOK_KEEPER"></span>
+                            <span class="text-danger" id="BOOK_KEEPER_ERROR" asp-validation-for="BOOK_KEEPER"></span>
                         </div>
                         <div class="1"></div>
                     </div>
@@ -166,12 +166,14 @@
     function updateKeeper() {
         let status = document.getElementById('selectedBookStatus').value;
         let keeper = document.getElementById('selectedBookKeeper');
+        let keeperErrMsg = document.getElementById('BOOK_KEEPER_ERROR');
         //alert(status);
 
         switch (status) { 
             case 'A': { //可以借出 清空
                 keeper.value = '';
                 keeper.removeAttribute("disabled");
+                keeperErrMsg.textContent = '';
                 break;
             }
             case 'B': { //已借出 不可空白
@@ -185,6 +187,7 @@
             case 'U': { //不可借出 清空並設為唯讀
                 keeper.value = '';
                 keeper.setAttribute("disabled", "disabled");
+                keeperErrMsg.textContent = '';
                 break;
             }
         }

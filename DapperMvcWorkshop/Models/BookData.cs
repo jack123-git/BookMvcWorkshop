@@ -69,7 +69,7 @@ namespace DapperMvcWorkshop.Models
         /// 借書者
         /// </summary>
         [Display(Name = "借閱人")]
-        //[Required(ErrorMessage = "借閱人 必須要有資料")]
+        [Required(ErrorMessage = "借閱人 必須要有資料")]
         [StringLength(12, ErrorMessage = "借閱人 長度不可大於 12!")]
         public string BOOK_KEEPER { get; set; }
     }

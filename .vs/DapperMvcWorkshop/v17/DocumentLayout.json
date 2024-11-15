@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\views\\book\\modifybook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\views\\book\\modifybook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\views\\book\\lendrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\views\\book\\lendrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\views\\book\\modifybook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\views\\book\\modifybook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\models\\bookdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\models\\bookdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\views\\book\\lendrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\views\\book\\lendrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\dappermvcworkshop\\dappermvcworkshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -42,37 +46,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "BookData.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Models\\BookData.cs",
+              "RelativeDocumentMoniker": "DapperMvcWorkshop\\Models\\BookData.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Models\\BookData.cs",
+              "RelativeToolTip": "DapperMvcWorkshop\\Models\\BookData.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T06:56:19.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ModifyBook.cshtml",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Views\\Book\\ModifyBook.cshtml",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Views\\Book\\ModifyBook.cshtml",
               "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Views\\Book\\ModifyBook.cshtml",
               "RelativeToolTip": "DapperMvcWorkshop\\Views\\Book\\ModifyBook.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAwLQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-13T06:23:54.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "DapperMvcWorkshop\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Controllers\\BookController.cs",
+              "RelativeToolTip": "DapperMvcWorkshop\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAIwKMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T05:35:47.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Repository\\BookRepository.cs",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Repository\\BookRepository.cs",
               "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Repository\\BookRepository.cs",
               "RelativeToolTip": "DapperMvcWorkshop\\Repository\\BookRepository.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAuwL0AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAuwK0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T01:56:34.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Views\\Book\\Index.cshtml",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Views\\Book\\Index.cshtml",
@@ -80,11 +110,12 @@
               "RelativeToolTip": "DapperMvcWorkshop\\Views\\Book\\Index.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-12T05:47:27.281Z"
+              "WhenOpened": "2024-11-12T05:47:27.281Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Views\\Shared\\_Layout.cshtml",
@@ -96,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "LendRecord.cshtml",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Views\\Book\\LendRecord.cshtml",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Views\\Book\\LendRecord.cshtml",
@@ -104,12 +135,11 @@
               "RelativeToolTip": "DapperMvcWorkshop\\Views\\Book\\LendRecord.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-14T22:03:56.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T22:03:56.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BookLendViewModel.cs",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\ViewModels\\BookLendViewModel.cs",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\ViewModels\\BookLendViewModel.cs",
@@ -121,20 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "DapperMvcWorkshop\\Controllers\\BookController.cs",
-              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Controllers\\BookController.cs",
-              "RelativeToolTip": "DapperMvcWorkshop\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAswIsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T05:35:47.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IBookRepository.cs",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\DapperMvcWorkshop\\DapperMvcWorkshop\\Repository\\IBookRepository.cs",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Repository\\IBookRepository.cs",

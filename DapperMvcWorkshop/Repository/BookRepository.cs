@@ -175,7 +175,7 @@ namespace DapperMvcWorkshop.Repository
                 {
                     BOOK_ID = bookLend.BOOK_ID,
                     KEEPER_ID = bookLend.KEEPER_ID,
-                    LEND_DATE = bookLend
+                    LEND_DATE = bookLend.LEND_DATE
                 });
                 return result;
             }

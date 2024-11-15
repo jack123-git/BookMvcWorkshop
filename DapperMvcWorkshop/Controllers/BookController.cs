@@ -138,7 +138,19 @@ namespace DapperMvcWorkshop.Controllers
         //[RequireAntiforgeryToken]
         public async Task<IActionResult> EditBook(BookData bookData)
         {
-            if (!ModelState.IsValid)
+            //if (!ModelState.IsValid)
+            if (!(ModelState["BOOK_NAME"].ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_NOTE"].ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_AUTHOR"].ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_CLASS_ID"].ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_PUBLISHER"].ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_BOUGHT_DATE"].ValidationState == ModelValidationState.Valid
+                && ((bookData.BOOK_STATUS =="A") 
+                     || (bookData.BOOK_STATUS == "B" && bookData.BOOK_KEEPER is not null)
+                     || (bookData.BOOK_STATUS == "C" && bookData.BOOK_KEEPER is not null)
+                     || (bookData.BOOK_STATUS == "U")
+                    )
+                ))
             {
                 ViewBag.BookClassList = await _bookRepository.GetAllBookClassAsync();
                 ViewBag.BookStatusList = await _bookRepository.GetAllBookStatusAsync();
@@ -151,17 +163,19 @@ namespace DapperMvcWorkshop.Controllers
             var result = await _bookRepository.UpdateBookDataAsync(bookData);
             if (result)
             {
-                if (string.IsNullOrEmpty(bookData.BOOK_KEEPER))
+                if (bookData.BOOK_STATUS == "B" || bookData.BOOK_STATUS == "C")
                 {
-                    var lend_record = new BookLend()
+                    if (!string.IsNullOrEmpty(bookData.BOOK_KEEPER))
                     {
-                        BOOK_ID = bookData.BOOK_ID,
-                        KEEPER_ID = bookData.BOOK_KEEPER,
-                        LEND_DATE = DateTime.Now.Date
-                    };
-                    result = await _bookRepository.AddBookLendRecordAsync(lend_record);
+                        var lend_record = new BookLend()
+                        {
+                            BOOK_ID = bookData.BOOK_ID,
+                            KEEPER_ID = bookData.BOOK_KEEPER,
+                            LEND_DATE = DateTime.Now.Date
+                        };
+                        result = await _bookRepository.AddBookLendRecordAsync(lend_record);
+                    }                    
                 }
-
                 return RedirectToAction("Index");
             }                
             else
