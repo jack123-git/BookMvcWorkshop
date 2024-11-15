@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Test\\MvcExercise\\EFMvcCodeFirst\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|EFMvcCodeFirst\\EFMvcCodeFirst.csproj|d:\\test\\mvcexercise\\efmvccodefirst\\efmvccodefirst\\viewmodels\\bookdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|EFMvcCodeFirst\\EFMvcCodeFirst.csproj|solutionrelative:efmvccodefirst\\viewmodels\\bookdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|EFMvcCodeFirst\\DapperMvcWorkshop.csproj|d:\\test\\mvcexercise\\efmvccodefirst\\efmvccodefirst\\dappermvcworkshop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|EFMvcCodeFirst\\DapperMvcWorkshop.csproj|solutionrelative:efmvccodefirst\\dappermvcworkshop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookDataViewModel.cs",
+              "DocumentMoniker": "D:\\Test\\MvcExercise\\EFMvcCodeFirst\\EFMvcCodeFirst\\ViewModels\\BookDataViewModel.cs",
+              "RelativeDocumentMoniker": "EFMvcCodeFirst\\ViewModels\\BookDataViewModel.cs",
+              "ToolTip": "D:\\Test\\MvcExercise\\EFMvcCodeFirst\\EFMvcCodeFirst\\ViewModels\\BookDataViewModel.cs",
+              "RelativeToolTip": "EFMvcCodeFirst\\ViewModels\\BookDataViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T02:03:50.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EFMvcCodeFirst.csproj",
+              "DocumentMoniker": "D:\\Test\\MvcExercise\\EFMvcCodeFirst\\EFMvcCodeFirst\\DapperMvcWorkshop.csproj",
+              "RelativeDocumentMoniker": "EFMvcCodeFirst\\DapperMvcWorkshop.csproj",
+              "ToolTip": "D:\\Test\\MvcExercise\\EFMvcCodeFirst\\EFMvcCodeFirst\\DapperMvcWorkshop.csproj",
+              "RelativeToolTip": "EFMvcCodeFirst\\DapperMvcWorkshop.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-11T02:01:43.818Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

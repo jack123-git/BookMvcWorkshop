@@ -1,0 +1,192 @@
+﻿@model BookData
+
+@{
+    var bookClassList = ViewBag.BookClassList;
+    var bookStatusList = ViewBag.BookStatusList;
+    var memberList = ViewBag.MemberList;
+    var action = ViewBag.Action; //action 用來區分新增 / 修改 書籍資料
+    var title = action == "CreateBook" ? "新增書籍" : "修改書籍";
+    ViewData["Title"] = title;
+}
+
+<div class="card bg-opacity-10 bg-primary">
+    <div class="card-header">
+        <H4>@($"{title}")</H4>
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm($"{action}", "Book", FormMethod.Post, new { nameof = "nbfrom" }))
+        {
+            <div class="container">
+                <!--書籍名稱-->
+                <div class="row">                  
+                    <div class="col-3 text-end align-content-center">
+                        @if (action == "EditBook")
+                        {
+                            <input asp-for="BOOK_ID" style="display:none" type="text" class="form-control">
+                        }
+                        <span class="text-danger">*</span>
+                        <label asp-for="BOOK_NAME" class="form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="BOOK_NAME" type="text" class="form-control">
+                        <span class="text-danger" asp-validation-for="BOOK_NAME"></span>
+                    </div>
+                    <div class="1"></div>
+                </div>
+                <!--書籍作者-->
+                <div class="row mt-2">
+                    <div class="col-3 text-end align-content-center">
+                        <span class="text-danger">*</span>
+                        <label asp-for="BOOK_AUTHOR" class="form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="BOOK_AUTHOR" type="text" class="form-control">
+                        <span class="text-danger" asp-validation-for="BOOK_AUTHOR"></span>
+                    </div>
+                    <div class="1"></div>
+                </div>
+                <!--出版商-->
+                <div class="row mt-2">
+                    <div class="col-3 text-end align-content-center">
+                        <span class="text-danger">*</span>
+                        <label asp-for="BOOK_PUBLISHER" class="form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="BOOK_PUBLISHER" type="text" class="form-control">
+                        <span class="text-danger" asp-validation-for="BOOK_PUBLISHER"></span>
+                    </div>
+                    <div class="1"></div>
+                </div>
+
+                <!--內容簡介-->
+                <div class="row mt-2">
+                    <div class="col-3 text-end align-content-center">
+                        <span class="text-danger">*</span>
+                        <label asp-for="BOOK_NOTE" class="form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <textarea asp-for="BOOK_NOTE" rows="8" class="form-control"></textarea>
+                        <span class="text-danger" asp-validation-for="BOOK_NOTE"></span>
+                    </div>
+                    <div class="1"></div>
+                </div>
+
+                <!--購書日期-->
+                <div class="row mt-2">
+                    <div class="col-3 text-end align-content-center">
+                        <span class="text-danger">*</span>
+                        <label asp-for="BOOK_BOUGHT_DATE" class="form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="BOOK_BOUGHT_DATE" type="date" class="form-control">
+                        <span class="text-danger" asp-validation-for="BOOK_BOUGHT_DATE"></span>
+                    </div>
+                    <div class="1"></div>
+                </div>
+
+                <!--書籍類別-->
+                <div class="row mt-2">
+                    <div class="col-3 text-end align-content-center">
+                        <span class="text-danger">*</span>
+                        <label asp-for="BOOK_CLASS_ID" class="form-label">書籍類別</label>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" asp-for="BOOK_CLASS_ID">
+                            <option value="">請選擇</option>
+                            @foreach (var item in bookClassList)
+                            {
+                                <option value="@item.BOOK_CLASS_ID">@item.BOOK_CLASS_NAME</option>
+                            }
+                        </select>
+                        <span class="text-danger" asp-validation-for="BOOK_CLASS_ID"></span>
+                    </div>
+                    <div class="1"></div>
+                </div>
+
+                @if (action == "EditBook")
+                {
+                    <!--書籍狀態-->
+                    <div class="row mt-2">
+                        <div class="col-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="BOOK_STATUS" class="form-label"></label>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-select" asp-for="BOOK_STATUS" id="selectedBookStatus" onchange="updateKeeper()">
+                                <option value="">請選擇</option>
+                                @foreach (var item in bookStatusList)
+                                {
+                                    <option value="@item.BOOK_STATUS_ID">@item.BOOK_STATUS_NAME</option>
+                                }
+                            </select>
+                            <span class="text-danger" asp-validation-for="BOOK_STATUS"></span>
+                        </div>
+                        <div class="1"></div>
+                    </div>
+
+                    <!--借閱人-->
+                    <div class="row mt-2">
+                        <div class="col-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="BOOK_KEEPER" class="form-label">借閱人</label>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-select" asp-for="BOOK_KEEPER" id="selectedBookKeeper">
+                                <option value="">請選擇</option>
+                                @foreach (var item in memberList)
+                                {
+                                    <option value="@item.USER_ID">@item.USER_ENAME-@item.USER_CNAME</option>
+                                }
+                            </select>
+                            <span class="text-danger" asp-validation-for="BOOK_KEEPER"></span>
+                        </div>
+                        <div class="1"></div>
+                    </div>
+                }
+
+                <div class="row mt-2">
+                    <div class="col-3"></div>
+                    <div class="col-9">
+                        <button type="submit" class="btn btn-outline-primary">儲存</button>
+                        <a href="/Book/Index" class="my-2 btn btn-outline-secondary">返回</a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-3"></div>
+                    <div class="col-9">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function updateKeeper() {
+        let status = document.getElementById('selectedBookStatus').value;
+        let keeper = document.getElementById('selectedBookKeeper');
+        //alert(status);
+
+        switch (status) { 
+            case 'A': { //可以借出 清空
+                keeper.value = '';
+                keeper.removeAttribute("disabled");
+                break;
+            }
+            case 'B': { //已借出 不可空白
+                keeper.removeAttribute("disabled");
+                break;
+            }
+            case 'C': { //已借出(未領) 不可空白
+                keeper.removeAttribute("disabled");
+                break;
+            }
+            case 'U': { //不可借出 清空並設為唯讀
+                keeper.value = '';
+                keeper.setAttribute("disabled", "disabled");
+                break;
+            }
+        }
+    }
+</script>

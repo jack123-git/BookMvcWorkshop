@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BookLendViewModel>
+@{
+    BookData bookData = ViewBag.bookData;
+    var title = $"{bookData.BOOK_NAME}借閱紀錄";
+    ViewData["Title"] = title;
+}
+
+<div class="card bg-opacity-10 bg-primary">
+    <div class="card-header">
+        <H4>@($"編號 {bookData.BOOK_ID} - {title}")</H4>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead class="table-dark opacity-75">
+                <tr>
+                    @* <th>@Html.DisplayNameFor(m => m.BOOK_ID)</th> *@
+                    <th>@Html.DisplayNameFor(m => m.LEND_DATE)</th>
+                    <th>@Html.DisplayNameFor(m => m.USER_ID)</th>
+                    <th>@Html.DisplayNameFor(m => m.USER_ENAME)</th>
+                    <th>@Html.DisplayNameFor(m => m.USER_CNAME)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @Model)
+                {
+                    <tr>
+                        @* <td>@Html.DisplayFor(m => item.BOOK_ID)</td> *@
+                        <td>@Html.DisplayFor(m => item.LEND_DATE)</td>
+                        <td>@Html.DisplayFor(m => item.USER_ID)</td>
+                        <td>@Html.DisplayFor(m => item.USER_ENAME)</td>
+                        <td>@Html.DisplayFor(m => item.USER_CNAME)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-3"></div>
+                <div class="col-4 text-center"><a href="/Book/Index" class="my-2 btn btn-outline-primary">返回</a></div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
