@@ -155,7 +155,7 @@ namespace DapperMvcWorkshop.Repository
                 await _dataAccess.SaveDataAsync("TP_DELETE_BOOK_DATA", new { BOOK_ID = id });
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

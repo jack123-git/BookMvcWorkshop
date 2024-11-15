@@ -17,7 +17,7 @@ namespace DapperMvcWorkshop.ViewModels
         /// 書籍名稱
         /// </summary>
         [Display(Name = "書名")]
-        public string BOOK_NAME { get; set; }
+        public required string BOOK_NAME { get; set; }
 
         /// <summary>
         /// 書籍作者
@@ -49,7 +49,7 @@ namespace DapperMvcWorkshop.ViewModels
         /// 狀態BOOK_CODE.CODE_ID (A可以借出 B以借出 U不可借出)
        /// </summary>
        [Display(Name = "借閱狀態")]
-       public string BOOK_STATUS_NAME { get; set; }
+       public required string BOOK_STATUS_NAME { get; set; }
 
         /// <summary>
         /// 借閱人
@@ -61,7 +61,7 @@ namespace DapperMvcWorkshop.ViewModels
         /// 圖書類別
         /// </summary>
         [Display(Name = "圖書類別")]
-        public string BOOK_CLASS_NAME { get; set; }
+        public required string BOOK_CLASS_NAME { get; set; }
 
 
     }

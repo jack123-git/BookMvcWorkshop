@@ -6,6 +6,7 @@ using static System.Reflection.Metadata.BlobBuilder;
 using DapperMvcWorkshop.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace DapperMvcWorkshop.Controllers
 {
@@ -13,38 +14,33 @@ namespace DapperMvcWorkshop.Controllers
     {
         private readonly IBookRepository _bookRepository;
 
-        public BookController(IBookRepository bookRepository)
+        private readonly INotyfService _notyf;
+
+        public BookController(IBookRepository bookRepository, INotyfService notyf)
         {
             _bookRepository = bookRepository;
+            _notyf = notyf;
         }
 
         public async Task<IActionResult> Index(int pg = 1, string SearchBookName = "", string SearchBookClassId = "", string SearchUserId = "", string SearchBookStatusId = "")
         {
+            // 測試 toast
+            // _notyf.Success("Success Notification");
+            var message = TempData["Message"];
+            if (message != null)
+            {
+                if (message!.ToString().Contains("成功"))
+                    _notyf.Success(message!.ToString(), 3);
+                else
+                    _notyf.Error(message!.ToString(), 3);
+            }
+
             ViewBag.BookClassList = await _bookRepository.GetAllBookClassAsync();
             ViewBag.BookStatusList = await _bookRepository.GetAllBookStatusAsync();
             ViewBag.MemberList = await _bookRepository.GetAllMemberAsync();
 
-            //List<BookDataViewModel> queryDataList = new List<BookDataViewModel>()
-            //{
-            //    new BookDataViewModel() { BOOK_ID=1, BOOK_CLASS_NAME="0001", BOOK_NAME="Asp.Net CORE MVC", BOOK_STATUS_NAME="可以借出",BOOK_BOUGHT_DATE=Convert.ToDateTime("2023/01/01"), BOOK_KEEPER_NAME ="Andy"},
-            //    new BookDataViewModel() { BOOK_ID=2, BOOK_CLASS_NAME="0002", BOOK_NAME="JQuery", BOOK_STATUS_NAME="已借出",BOOK_BOUGHT_DATE=Convert.ToDateTime("2023/01/01"), BOOK_KEEPER_NAME ="Mary"}
-            //};
-            //List<BookDataViewModel> queryData = new List<BookDataViewModel>();
-
             List<BookDataViewModel> queryData = await _bookRepository.GetQueryBookDataAsync("", SearchBookName, SearchBookClassId, SearchUserId, SearchBookStatusId);
-            List<BookDataViewModel> books = new List<BookDataViewModel>();
-            //if ((SearchBookName != "" && SearchBookName != null) || (SearchBookClassId != "" && SearchBookClassId != null) || (SearchUserId != "" && SearchUserId != null) || (SearchBookStatusId != "" && SearchBookStatusId != null))
-            //{
-            //    //queryData = await _bookRepository.GetQueryBookDataAsync("", SearchBookName, SearchBookClassId, SearchUserId, SearchBookStatusId);
-            //    books = queryData.Where(
-            //        p => p.BOOK_NAME.Contains(SearchBookName, StringComparison.OrdinalIgnoreCase)
-
-            //    ).ToList();
-
-
-            //}
-            //else
-                books = queryData.ToList();
+            List<BookDataViewModel> books = queryData.ToList();
 
             this.ViewBag.SearchBookName = SearchBookName;
             this.ViewBag.SearchBookClassId = SearchBookClassId;
@@ -84,12 +80,12 @@ namespace DapperMvcWorkshop.Controllers
         public async Task<IActionResult> CreateBook(BookData bookData)
         {
             //if (!ModelState.IsValid)
-            if (!(ModelState["BOOK_NAME"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_NOTE"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_AUTHOR"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_CLASS_ID"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_PUBLISHER"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_BOUGHT_DATE"].ValidationState == ModelValidationState.Valid
+            if (!(ModelState["BOOK_NAME"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_NOTE"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_AUTHOR"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_CLASS_ID"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_PUBLISHER"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_BOUGHT_DATE"]!.ValidationState == ModelValidationState.Valid
                 ))
             {
                 ViewBag.BookClassList = await _bookRepository.GetAllBookClassAsync();
@@ -106,9 +102,15 @@ namespace DapperMvcWorkshop.Controllers
 
             var result = await _bookRepository.AddBookDataAsync(bookData);
             if (result)
+            {
+                TempData["Message"] = $"新增書籍 {bookData.BOOK_NAME} 資料成功";
                 return RedirectToAction("Index");
+            }                
             else
+            {
+                _notyf.Error("新增書籍資料失敗", 3);
                 return View("ModifyBook", bookData);
+            }
         }
 
         /// <summary>
@@ -139,12 +141,12 @@ namespace DapperMvcWorkshop.Controllers
         public async Task<IActionResult> EditBook(BookData bookData)
         {
             //if (!ModelState.IsValid)
-            if (!(ModelState["BOOK_NAME"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_NOTE"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_AUTHOR"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_CLASS_ID"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_PUBLISHER"].ValidationState == ModelValidationState.Valid
-                && ModelState["BOOK_BOUGHT_DATE"].ValidationState == ModelValidationState.Valid
+            if (!(ModelState["BOOK_NAME"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_NOTE"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_AUTHOR"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_CLASS_ID"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_PUBLISHER"]!.ValidationState == ModelValidationState.Valid
+                && ModelState["BOOK_BOUGHT_DATE"]!.ValidationState == ModelValidationState.Valid
                 && ((bookData.BOOK_STATUS =="A") 
                      || (bookData.BOOK_STATUS == "B" && bookData.BOOK_KEEPER is not null)
                      || (bookData.BOOK_STATUS == "C" && bookData.BOOK_KEEPER is not null)
@@ -163,19 +165,17 @@ namespace DapperMvcWorkshop.Controllers
             var result = await _bookRepository.UpdateBookDataAsync(bookData);
             if (result)
             {
-                if (bookData.BOOK_STATUS == "B" || bookData.BOOK_STATUS == "C")
+                if ((bookData.BOOK_STATUS == "B" || bookData.BOOK_STATUS == "C") && (!string.IsNullOrEmpty(bookData.BOOK_KEEPER)))
                 {
-                    if (!string.IsNullOrEmpty(bookData.BOOK_KEEPER))
+                    var lend_record = new BookLend()
                     {
-                        var lend_record = new BookLend()
-                        {
-                            BOOK_ID = bookData.BOOK_ID,
-                            KEEPER_ID = bookData.BOOK_KEEPER,
-                            LEND_DATE = DateTime.Now.Date
-                        };
-                        result = await _bookRepository.AddBookLendRecordAsync(lend_record);
-                    }                    
+                        BOOK_ID = bookData.BOOK_ID,
+                        KEEPER_ID = bookData.BOOK_KEEPER,
+                        LEND_DATE = DateTime.Now.Date
+                    };
+                    await _bookRepository.AddBookLendRecordAsync(lend_record);                    
                 }
+                TempData["Message"] = $"修改書籍 {bookData.BOOK_NAME} 資料成功";
                 return RedirectToAction("Index");
             }                
             else
@@ -189,7 +189,18 @@ namespace DapperMvcWorkshop.Controllers
         /// <returns></returns>
         public async Task<IActionResult> Delete(int Id)
         {
-            var deleteResult = await _bookRepository.DeleteBookDataAsync(Id);
+            var bookData = await _bookRepository.GetBookDataByIdAsync(Id);
+            if (bookData == null) 
+            {
+                _notyf.Error($"找不到書籍編號 {Id} 資料", 4);
+                return NotFound();
+            }
+
+            var result = await _bookRepository.DeleteBookDataAsync(Id);
+            if (result)
+            {
+                TempData["Message"] = $"刪除書籍 {bookData.BOOK_NAME} 資料成功";
+            }
             return RedirectToAction("Index");
         }
 

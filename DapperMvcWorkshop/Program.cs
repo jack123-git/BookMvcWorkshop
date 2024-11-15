@@ -1,3 +1,4 @@
+using AspNetCoreHero.ToastNotification;
 using DapperMvcWorkshop.DataAccess;
 using DapperMvcWorkshop.Repository;
 
@@ -14,6 +15,14 @@ namespace DapperMvcWorkshop
 
             builder.Services.AddScoped<IDataAccess, DapperDataAccess>();
             builder.Services.AddScoped<IBookRepository, BookRepository>();
+
+            // ¥[¤J toast service
+            builder.Services.AddNotyf(config => 
+            {
+                config.DurationInSeconds = 10;
+                config.IsDismissable = true;
+                config.Position = NotyfPosition.TopRight;
+            });
 
             var app = builder.Build();
 

@@ -26,7 +26,7 @@ namespace DapperMvcWorkshop.ViewModels
         /// </summary>
         [Display(Name = "人員編號")]
         [Required(ErrorMessage = "人員編號 必須要有資料")]
-        public string USER_ID { get; set; }
+        public required string USER_ID { get; set; }
 
         /// <summary>
         /// 中文名稱

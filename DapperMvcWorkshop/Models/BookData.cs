@@ -19,7 +19,7 @@ namespace DapperMvcWorkshop.Models
         [Display(Name = "書籍名稱")]
         [Required(ErrorMessage = "書籍名稱 必須要有資料")]
         [StringLength(200, ErrorMessage = "書籍名稱 長度不可大於 200!")]
-        public string BOOK_NAME { get; set; }
+        public required string BOOK_NAME { get; set; }
 
         /// <summary>
         /// 類別代號BOOK_CLASS.BOOK_CLASS_ID
@@ -27,7 +27,7 @@ namespace DapperMvcWorkshop.Models
         [Display(Name = "類別代號BOOK_CLASS.BOOK_CLASS_ID")]
         [Required(ErrorMessage = "類別代號BOOK_CLASS.BOOK_CLASS_ID 必須要有資料")]
         [StringLength(4, ErrorMessage = "類別代號BOOK_CLASS.BOOK_CLASS_ID 長度不可大於 4!")]
-        public string BOOK_CLASS_ID { get; set; }
+        public required string BOOK_CLASS_ID { get; set; }
 
         /// <summary>
         /// 書籍作者
@@ -63,7 +63,7 @@ namespace DapperMvcWorkshop.Models
        [Display(Name = "借閱狀態")]
        //[Required(ErrorMessage = "狀態(A可以借出 B以借出 U不可借出) 必須要有資料")]
        [StringLength(1, ErrorMessage = "狀態(A可以借出 B以借出 U不可借出) 長度不可大於 1!")]
-       public string BOOK_STATUS { get; set; }
+       public required string BOOK_STATUS { get; set; }
 
         /// <summary>
         /// 借書者
@@ -71,6 +71,6 @@ namespace DapperMvcWorkshop.Models
         [Display(Name = "借閱人")]
         [Required(ErrorMessage = "借閱人 必須要有資料")]
         [StringLength(12, ErrorMessage = "借閱人 長度不可大於 12!")]
-        public string BOOK_KEEPER { get; set; }
+        public required string BOOK_KEEPER { get; set; }
     }
 }
