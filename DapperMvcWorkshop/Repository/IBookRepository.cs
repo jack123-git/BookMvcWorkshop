@@ -47,28 +47,28 @@ namespace DapperMvcWorkshop.Repository
         /// </summary>
         /// <param name="bookData"></param>
         /// <returns></returns>
-        Task<bool> AddBookDataAsync(BookData bookData);
+        Task<CommadResult> AddBookDataAsync(BookData bookData);
 
         /// <summary>
         /// 更新書籍資料
         /// </summary>
         /// <param name="bookData">書籍資料</param>
         /// <returns></returns>
-        Task<bool> UpdateBookDataAsync(BookData bookData);
+        Task<CommadResult> UpdateBookDataAsync(BookData bookData);
 
         /// <summary>
         /// 刪除書籍資料
         /// </summary>
         /// <param name="id">書本ID</param>
         /// <returns></returns>
-        Task<bool> DeleteBookDataAsync(int id);
+        Task<CommadResult> DeleteBookDataAsync(int id);
 
         /// <summary>
         /// 新增書籍借閱紀錄
         /// </summary>
         /// <param name="bookLend"></param>
         /// <returns></returns>
-        Task<bool> AddBookLendRecordAsync(BookLend bookLend);
+        Task<CommadResult> AddBookLendRecordAsync(BookLend bookLend);
 
         /// <summary>
         /// 取得閱覽紀錄

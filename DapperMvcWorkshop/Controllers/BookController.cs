@@ -101,7 +101,7 @@ namespace DapperMvcWorkshop.Controllers
             bookData.BOOK_STATUS = "A";
 
             var result = await _bookRepository.AddBookDataAsync(bookData);
-            if (result)
+            if (result.ResultCode != 0)
             {
                 TempData["Message"] = $"新增書籍 {bookData.BOOK_NAME} 資料成功";
                 return RedirectToAction("Index");
@@ -163,7 +163,7 @@ namespace DapperMvcWorkshop.Controllers
             }
 
             var result = await _bookRepository.UpdateBookDataAsync(bookData);
-            if (result)
+            if (result.ResultCode != 0)
             {
                 if ((bookData.BOOK_STATUS == "B" || bookData.BOOK_STATUS == "C") && (!string.IsNullOrEmpty(bookData.BOOK_KEEPER)))
                 {
@@ -197,7 +197,7 @@ namespace DapperMvcWorkshop.Controllers
             }
 
             var result = await _bookRepository.DeleteBookDataAsync(Id);
-            if (result)
+            if (result.ResultCode != 0)
             {
                 TempData["Message"] = $"刪除書籍 {bookData.BOOK_NAME} 資料成功";
             }

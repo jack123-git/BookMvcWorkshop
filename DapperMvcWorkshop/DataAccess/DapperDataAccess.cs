@@ -17,11 +17,11 @@ namespace DapperMvcWorkshop.DataAccess
             return await connection.QueryAsync<T>(SpName, parameters, commandType: commandType);
         }
 
-        public async Task<bool> SaveDataAsync<T>(string spName, T parameters, CommandType commandType = CommandType.StoredProcedure, string connectionStringId = "DbConnectString")
+        public async Task<int> SaveDataAsync<T>(string spName, T parameters, CommandType commandType = CommandType.StoredProcedure, string connectionStringId = "DbConnectString")
         {
             using IDbConnection connection = new SqlConnection(_config.GetConnectionString(connectionStringId));
             int num = await connection.ExecuteAsync(spName, parameters, commandType: commandType);
-            return num > 0 ? true : false;
+            return num;
         }
     }
 }

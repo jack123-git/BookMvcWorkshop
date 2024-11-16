@@ -85,12 +85,13 @@ namespace DapperMvcWorkshop.Repository
         /// </summary>
         /// <param name="bookData"></param>
         /// <returns></returns>
-        public async Task<bool> AddBookDataAsync(BookData bookData)
+        public async Task<CommadResult> AddBookDataAsync(BookData bookData)
         {
+            var result = new CommadResult();
             try
             {
                 string storedProcedure = "TP_CREATE_BOOK_DATA";
-                bool result = await _dataAccess.SaveDataAsync(storedProcedure, new
+                result.ResultCode = await _dataAccess.SaveDataAsync(storedProcedure, new
                 {
                     BOOK_NAME = bookData.BOOK_NAME,
                     BOOK_CLASS_ID = bookData.BOOK_CLASS_ID,
@@ -106,13 +107,14 @@ namespace DapperMvcWorkshop.Repository
                     //MODIFY_DATE = bookData.MODIFY_DATE,
                     //MODIFY_USER = bookData.MODIFY_USER
                 });
-                return result;
+                result.CommandStatus = 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                return false;
+                result.ResultCode = 0;
+                result.ErrorMessage = ex.Message;
             }
+            return result;
         }
 
         /// <summary>
@@ -120,26 +122,38 @@ namespace DapperMvcWorkshop.Repository
         /// </summary>
         /// <param name="bookData">書籍資料</param>
         /// <returns></returns>
-        public async Task<bool> UpdateBookDataAsync(BookData bookData)
+        public async Task<CommadResult> UpdateBookDataAsync(BookData bookData)
         {
+            var result = new CommadResult();
             string storedProcedure = "TP_UPDATE_BOOK_DATA";
-            bool result = await _dataAccess.SaveDataAsync(storedProcedure, new
+
+            try
             {
-                BOOK_ID = bookData.BOOK_ID,
-                BOOK_NAME = bookData.BOOK_NAME,
-                BOOK_CLASS_ID = bookData.BOOK_CLASS_ID,
-                BOOK_AUTHOR = bookData.BOOK_AUTHOR,
-                BOOK_BOUGHT_DATE = bookData.BOOK_BOUGHT_DATE,
-                BOOK_PUBLISHER = bookData.BOOK_PUBLISHER,
-                BOOK_NOTE = bookData.BOOK_NOTE,
-                BOOK_STATUS = bookData.BOOK_STATUS,
-                BOOK_KEEPER = bookData.BOOK_KEEPER
-                //,BOOK_AMOUNT = bookData.BOOK_AMOUNT,
-                //CREATE_DATE = bookData.CREATE_DATE,
-                //CREATE_USER = bookData.CREATE_USER,
-                //MODIFY_DATE = bookData.MODIFY_DATE,
-                //MODIFY_USER = bookData.MODIFY_USER
-            });
+                result.ResultCode = await _dataAccess.SaveDataAsync(storedProcedure, new
+                {
+                    BOOK_ID = bookData.BOOK_ID,
+                    BOOK_NAME = bookData.BOOK_NAME,
+                    BOOK_CLASS_ID = bookData.BOOK_CLASS_ID,
+                    BOOK_AUTHOR = bookData.BOOK_AUTHOR,
+                    BOOK_BOUGHT_DATE = bookData.BOOK_BOUGHT_DATE,
+                    BOOK_PUBLISHER = bookData.BOOK_PUBLISHER,
+                    BOOK_NOTE = bookData.BOOK_NOTE,
+                    BOOK_STATUS = bookData.BOOK_STATUS,
+                    BOOK_KEEPER = bookData.BOOK_KEEPER
+                    //,BOOK_AMOUNT = bookData.BOOK_AMOUNT,
+                    //CREATE_DATE = bookData.CREATE_DATE,
+                    //CREATE_USER = bookData.CREATE_USER,
+                    //MODIFY_DATE = bookData.MODIFY_DATE,
+                    //MODIFY_USER = bookData.MODIFY_USER
+                });
+                result.CommandStatus = 1;
+            }
+            catch (Exception ex)
+            {
+                result.ResultCode = 0;
+                result.ErrorMessage = ex.Message;
+            }
+
             return result;
         }
 
@@ -148,17 +162,21 @@ namespace DapperMvcWorkshop.Repository
         /// </summary>
         /// <param name="id">書本ID</param>
         /// <returns></returns>
-        public async Task<bool> DeleteBookDataAsync(int id)
+        public async Task<CommadResult> DeleteBookDataAsync(int id)
         {
+            var result = new CommadResult();
             try
             {
-                await _dataAccess.SaveDataAsync("TP_DELETE_BOOK_DATA", new { BOOK_ID = id });
-                return true;
+                result.ResultCode = await _dataAccess.SaveDataAsync("TP_DELETE_BOOK_DATA", new { BOOK_ID = id });
+                result.CommandStatus = 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                result.ResultCode = 0;
+                result.ErrorMessage = ex.Message;
             }
+
+            return result;
         }
 
         /// <summary>
@@ -166,24 +184,27 @@ namespace DapperMvcWorkshop.Repository
         /// </summary>
         /// <param name="bookLend"></param>
         /// <returns></returns>
-        public async Task<bool> AddBookLendRecordAsync(BookLend bookLend)
+        public async Task<CommadResult> AddBookLendRecordAsync(BookLend bookLend)
         {
+            var result = new CommadResult();
             try
             {
                 string storedProcedure = "TP_CREATE_BOOK_LEND_RECORD";
-                bool result = await _dataAccess.SaveDataAsync(storedProcedure, new
+                result.ResultCode = await _dataAccess.SaveDataAsync(storedProcedure, new
                 {
                     BOOK_ID = bookLend.BOOK_ID,
                     KEEPER_ID = bookLend.KEEPER_ID,
                     LEND_DATE = bookLend.LEND_DATE
                 });
-                return result;
+                result.CommandStatus = 1;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                return false;
+                result.ResultCode = 0;
+                result.ErrorMessage = ex.Message;
             }
+
+            return result;
         }
 
         /// <summary>
