@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\bookapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|solutionrelative:bookapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\bookapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|solutionrelative:bookapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\bookapi\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|solutionrelative:bookapi\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\bookapi\\repository\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|solutionrelative:bookapi\\repository\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\dappermvcworkshop\\repository\\bookapirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3307AB21-5F54-4D4A-81B7-A897269B17B4}|DapperMvcWorkshop\\DapperMvcWorkshop.csproj|solutionrelative:dappermvcworkshop\\repository\\bookapirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,19 +43,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Program.cs",
+              "RelativeDocumentMoniker": "BookApi\\Program.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Program.cs",
+              "RelativeToolTip": "BookApi\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T10:56:45.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "BookApi\\Controllers\\BooksController.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "BookApi\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAiwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T10:30:27.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Repository\\BookRepository.cs",
+              "RelativeDocumentMoniker": "BookApi\\Repository\\BookRepository.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Repository\\BookRepository.cs",
+              "RelativeToolTip": "BookApi\\Repository\\BookRepository.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAqwOMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T10:46:51.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Repository\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "BookApi\\Repository\\IBookRepository.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\Repository\\IBookRepository.cs",
+              "RelativeToolTip": "BookApi\\Repository\\IBookRepository.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAzwE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T10:46:03.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BookApiRepository.cs",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\DapperMvcWorkshop\\Repository\\BookApiRepository.cs",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Repository\\BookApiRepository.cs",
               "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\DapperMvcWorkshop\\Repository\\BookApiRepository.cs",
               "RelativeToolTip": "DapperMvcWorkshop\\Repository\\BookApiRepository.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAgwJEAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAIwHUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T10:30:00.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\DapperMvcWorkshop\\Program.cs",
               "RelativeDocumentMoniker": "DapperMvcWorkshop\\Program.cs",

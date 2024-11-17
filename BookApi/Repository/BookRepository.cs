@@ -1,7 +1,6 @@
 ﻿using BookApi.DataAccess;
 using BookApi.Models;
 using BookApi.ViewModels;
-using System.Net;
 
 namespace BookApi.Repository
 {
