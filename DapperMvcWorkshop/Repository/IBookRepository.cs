@@ -33,7 +33,7 @@ namespace DapperMvcWorkshop.Repository
         /// <param name="BorrowId"></param>
         /// <param name="bookStatusCode"></param>
         /// <returns></returns>
-        Task<List<BookDataViewModel>> GetQueryBookDataAsync(string bookId = "", string bookName = "", string bookClassId = "", string BorrowId = "", string bookStatusCode = "");
+        Task<List<BookDataViewModel>> GetQueryBookDataAsync(string bookName = "", string bookClassId = "", string BorrowerId = "", string bookStatusCode = "");
 
         /// <summary>
         /// 取得書籍資料

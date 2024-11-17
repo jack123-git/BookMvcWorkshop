@@ -39,7 +39,7 @@ namespace DapperMvcWorkshop.Controllers
             ViewBag.BookStatusList = await _bookRepository.GetAllBookStatusAsync();
             ViewBag.MemberList = await _bookRepository.GetAllMemberAsync();
 
-            List<BookDataViewModel> queryData = await _bookRepository.GetQueryBookDataAsync("", SearchBookName, SearchBookClassId, SearchUserId, SearchBookStatusId);
+            List<BookDataViewModel> queryData = await _bookRepository.GetQueryBookDataAsync(SearchBookName, SearchBookClassId, SearchUserId, SearchBookStatusId);
             List<BookDataViewModel> books = queryData.ToList();
 
             this.ViewBag.SearchBookName = SearchBookName;
@@ -101,6 +101,7 @@ namespace DapperMvcWorkshop.Controllers
             bookData.BOOK_STATUS = "A";
 
             var result = await _bookRepository.AddBookDataAsync(bookData);
+
             if (result.ResultCode != 0)
             {
                 TempData["Message"] = $"新增書籍 {bookData.BOOK_NAME} 資料成功";

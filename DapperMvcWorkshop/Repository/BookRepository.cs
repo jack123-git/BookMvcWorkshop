@@ -47,7 +47,7 @@ namespace DapperMvcWorkshop.Repository
             return result;
         }
 
-        public async Task<List<BookDataViewModel>> GetQueryBookDataAsync(string bookId="",string bookName="", string bookClassId = "", string BorrowId = "", string bookStatusCode = "")
+        public async Task<List<BookDataViewModel>> GetQueryBookDataAsync(string bookName="", string bookClassId = "", string BorrowerId = "", string bookStatusCode = "")
         {
             string sql = @"
                 SELECT A.BOOK_ID, A.BOOK_NAME, B.BOOK_CLASS_NAME, A.BOOK_BOUGHT_DATE, C.CODE_NAME AS BOOK_STATUS_NAME, E.USER_ENAME+'-'+E.USER_CNAME AS BORROWER_NAME
@@ -60,11 +60,10 @@ namespace DapperMvcWorkshop.Repository
                 AND (B.BOOK_CLASS_ID = @BookClassId OR @BookClassId = '')
                 AND (E.[USER_ID]= @KeeperId OR @KeeperId = '')
                 AND (A.BOOK_STATUS = @BookStatusCode OR @BookStatusCode = '')
-                AND (A.BOOK_ID = @BookId OR @BookId = '')
                 ORDER BY A.BOOK_BOUGHT_DATE DESC, A.BOOK_ID"
             ;
 
-            var result = ((IEnumerable<BookDataViewModel>)await _dataAccess.GetDataAsync<BookDataViewModel, dynamic>(sql, new { BookId= bookId, BookName= bookName, BookClassId= bookClassId, KeeperId= BorrowId, BookStatusCode= bookStatusCode }, System.Data.CommandType.Text)).ToList();
+            var result = ((IEnumerable<BookDataViewModel>)await _dataAccess.GetDataAsync<BookDataViewModel, dynamic>(sql, new {BookName= bookName, BookClassId= bookClassId, KeeperId= BorrowerId, BookStatusCode= bookStatusCode }, System.Data.CommandType.Text)).ToList();
             return result;
         }
 
