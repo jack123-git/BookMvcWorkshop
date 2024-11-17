@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using AspNetCoreHero.ToastNotification.Abstractions;
 
+using System.Text;
+using System.Text.Json;
+
 namespace DapperMvcWorkshop.Controllers
 {
     public class BookController : Controller

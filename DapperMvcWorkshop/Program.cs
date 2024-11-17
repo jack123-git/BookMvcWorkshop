@@ -1,6 +1,7 @@
 using AspNetCoreHero.ToastNotification;
 using DapperMvcWorkshop.DataAccess;
 using DapperMvcWorkshop.Repository;
+using System.Net;
 
 namespace DapperMvcWorkshop
 {
@@ -13,8 +14,9 @@ namespace DapperMvcWorkshop
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped(SP => new HttpClient { BaseAddress = new Uri("https://localhost:5600/") });
             builder.Services.AddScoped<IDataAccess, DapperDataAccess>();
-            builder.Services.AddScoped<IBookRepository, BookRepository>();
+            builder.Services.AddScoped<IBookRepository, BookApiRepository>();
 
             // ¥[¤J toast service
             builder.Services.AddNotyf(config => 
