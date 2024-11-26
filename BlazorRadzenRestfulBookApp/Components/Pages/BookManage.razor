@@ -1,0 +1,96 @@
+﻿@page "/bookmanage"
+@inject IBookRepository bookRepository
+
+<h4 class="rz-text-h4" >
+    圖書維護
+</h4>
+
+<RadzenCard class="rz-my-1 rz-mx-auto" Style="max-width: 600px">
+    <RadzenRow Gap="0.75rem" class="mb-1">
+        <RadzenColumn Size="3" class="rz-text-align-right rz-color-on-info-lighter mt-1">
+            <RadzenText TextStyle="TextStyle.H6">書名</RadzenText>            
+        </RadzenColumn>
+        <RadzenColumn class="rz-color-on-info-lighter mb-2">
+            <RadzenTextBox Placeholder="輸入查詢書名..." @bind-Value=@queryBookName Style="width: 100%" aria-label="TextBox with placeholder" />
+        </RadzenColumn>
+        <RadzenColumn Size="1">            
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenRow Gap="0.75rem" class="mb-1">
+        <RadzenColumn Size="3" class="rz-text-align-right rz-color-on-info-lighter mt-1">
+            <RadzenText TextStyle="TextStyle.H6">圖書類別</RadzenText>
+        </RadzenColumn>
+        <RadzenColumn class="rz-color-on-info-lighter mb-2">
+            <RadzenDropDown @bind-Value=@queryBookClass ValueProperty="BOOK_CLASS_ID" TextProperty="BOOK_CLASS_NAME" Data=@bookClassList Style="width: 100%; max-width: 400px;" Name="DropDownBindValue" />
+        </RadzenColumn>
+        <RadzenColumn Size="1"></RadzenColumn>
+    </RadzenRow>
+    <RadzenRow Gap="0.75rem" class="mb-1">
+        <RadzenColumn Size="3" class="rz-text-align-right rz-color-on-info-lighter mt-1">
+            <RadzenText TextStyle="TextStyle.H6">借閱人</RadzenText>
+        </RadzenColumn>
+        <RadzenColumn class="rz-color-on-info-lighter mb-2">
+            <RadzenDropDown @bind-Value=@queryMemberId ValueProperty="USER_ID" TextProperty="USER_Name" Data=@memberList Style="width: 100%; max-width: 400px;" Name="DropDownBindValue" />
+        </RadzenColumn>
+        <RadzenColumn Size="1"></RadzenColumn>
+    </RadzenRow>
+    <RadzenRow Gap="0.75rem" class="mb-1">
+        <RadzenColumn Size="3" class="rz-text-align-right rz-color-on-info-lighter mt-1">
+            <RadzenText TextStyle="TextStyle.H6">借閱狀態</RadzenText>
+        </RadzenColumn>
+        <RadzenColumn class="rz-color-on-info-lighter mb-2">
+            <RadzenDropDown @bind-Value=@queryBookStatusId ValueProperty="BOOK_STATUS_ID" TextProperty="BOOK_STATUS_NAME" Data=@bookStatusList Style="width: 100%; max-width: 400px;" Name="DropDownBindValue" />
+        </RadzenColumn>
+        <RadzenColumn Size="1"></RadzenColumn>
+    </RadzenRow>
+    <RadzenRow Gap="0.75rem" >
+        <RadzenColumn Size="3" class="rz-text-align-right rz-color-on-info-lighter mt-1">
+
+        </RadzenColumn>
+        <RadzenColumn class="rz-color-on-info-lighter">
+            <RadzenButton Variant="Variant.Outlined" Text="查詢" ButtonStyle="ButtonStyle.Primary" />
+            <RadzenButton Variant="Variant.Outlined" Text="清除" ButtonStyle="ButtonStyle.Secondary" />
+            <RadzenButton Variant="Variant.Outlined" Text="新增" ButtonStyle="ButtonStyle.Success" />
+        </RadzenColumn>
+        <RadzenColumn Size="1"></RadzenColumn>
+    </RadzenRow>
+
+</RadzenCard>
+
+@* 測試用 *@
+<RadzenCard class="rz-my-1 rz-mx-auto" Style="max-width: 200px">
+    <div>
+        書籍名稱：@queryBookName
+    </div>
+    <div>
+        書籍類別代碼：@queryBookClass
+    </div>
+    <div>
+        借閱人代碼：@queryMemberId
+    </div>
+    <div>
+        借閱狀態代碼：@queryBookStatusId
+    </div>
+</RadzenCard>
+
+
+
+@code {
+    string queryBookName = "";
+    string queryBookClass = "";
+    string queryMemberId = "";
+    string queryBookStatusId = "";
+
+    List<BookClass> bookClassList { get; set; } = new List<BookClass>();
+    List<Member> memberList { get; set; } = new List<Member>();
+    List<BookStatus> bookStatusList { get; set; } = new List<BookStatus>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        bookClassList = ((IEnumerable<BookClass>)await bookRepository.GetAllBookClassAsync()).ToList();
+        memberList = ((IEnumerable<Member>)await bookRepository.GetAllMemberAsync()).ToList();
+        bookStatusList = ((IEnumerable<BookStatus>)await bookRepository.GetAllBookStatusAsync()).ToList();
+
+    }
+}

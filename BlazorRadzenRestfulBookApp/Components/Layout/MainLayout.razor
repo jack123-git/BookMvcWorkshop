@@ -1,0 +1,66 @@
+﻿@inherits LayoutComponentBase
+
+@* <div class="page">
+    <RadzenDialog />
+    <RadzenNotification />
+    <RadzenContextMenu />
+    <RadzenTooltip />
+
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+ *@
+
+<RadzenDialog />
+<RadzenNotification />
+<RadzenContextMenu />
+<RadzenTooltip />
+
+<RadzenLayout>
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+            <RadzenLabel class="rz-text-h4 rz-pt-1 text-white mb-2" Text="XXX圖書管理系統_Blazor版本" />
+        </RadzenStack>
+    </RadzenHeader>
+    <RadzenSidebar Responsive="false" Style="width: max-content">
+        <RadzenPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false">
+            <RadzenPanelMenuItem Text="Overview" Icon="home" />
+@*             <RadzenPanelMenuItem Text="Dashboard" Icon="dashboard" />
+            <RadzenPanelMenuItem Text="UI Fundamentals" Icon="auto_awesome">
+                <RadzenPanelMenuItem Text="Themes" Icon="color_lens" />
+                <RadzenPanelMenuItem Text="Colors" Icon="invert_colors" />
+            </RadzenPanelMenuItem> *@
+            <RadzenPanelMenuItem Text="圖書維護" Icon="chrome_reader_mode" Path="/bookmanage" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+    <RadzenBody>
+        <div>
+            @Body
+        </div>
+    </RadzenBody>
+    <RadzenFooter>
+        Footer
+    </RadzenFooter>
+</RadzenLayout>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+@code {
+    bool sidebarExpanded = true;
+}

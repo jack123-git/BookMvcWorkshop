@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperMvcWorkshop", "Dapper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApi", "BookApi\BookApi.csproj", "{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorRadzenRestfulBookApp", "BlazorRadzenRestfulBookApp\BlazorRadzenRestfulBookApp.csproj", "{71E83FFC-31E8-442D-A03C-6A5532EA7A22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E83FFC-31E8-442D-A03C-6A5532EA7A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E83FFC-31E8-442D-A03C-6A5532EA7A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E83FFC-31E8-442D-A03C-6A5532EA7A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E83FFC-31E8-442D-A03C-6A5532EA7A22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

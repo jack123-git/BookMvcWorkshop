@@ -164,7 +164,8 @@
 
 <script>
     function updateKeeper() {
-        let status = document.getElementById('selectedBookStatus').value;
+        let status = $('#selectedBookStatus').val();
+        @* let status = document.getElementById('selectedBookStatus').value; *@
         let keeper = document.getElementById('selectedBookKeeper');
         let keeperErrMsg = document.getElementById('BOOK_KEEPER_ERROR');
         //alert(status);
