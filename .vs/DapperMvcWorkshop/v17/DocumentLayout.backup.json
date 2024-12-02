@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\blazorradzenrestfulbookapp\\components\\pages\\bookdetailpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|solutionrelative:blazorradzenrestfulbookapp\\components\\pages\\bookdetailpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\blazorradzenrestfulbookapp\\components\\pages\\modifybookpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|solutionrelative:blazorradzenrestfulbookapp\\components\\pages\\modifybookpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\blazorradzenrestfulbookapp\\components\\pages\\bookmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|solutionrelative:blazorradzenrestfulbookapp\\components\\pages\\bookmanage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\blazorradzenrestfulbookapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|solutionrelative:blazorradzenrestfulbookapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\bookapi\\viewmodel\\bookdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F150B0F8-DCA7-4029-A4EA-23AB851BEEE6}|BookApi\\BookApi.csproj|solutionrelative:bookapi\\viewmodel\\bookdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\blazorradzenrestfulbookapp\\components\\pages\\booklendrecordpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|solutionrelative:blazorradzenrestfulbookapp\\components\\pages\\booklendrecordpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|d:\\jack_data\\download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\course4_net_mvc\\workshop\\source\\gitmvcworkshop\\bookmvcworkshop\\blazorradzenrestfulbookapp\\components\\pages\\editbookpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71E83FFC-31E8-442D-A03C-6A5532EA7A22}|BlazorRadzenRestfulBookApp\\BlazorRadzenRestfulBookApp.csproj|solutionrelative:blazorradzenrestfulbookapp\\components\\pages\\editbookpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +50,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookManage.razor",
-              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
-              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
-              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
-              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T02:04:51.369Z",
+              "DocumentIndex": 3,
+              "Title": "BookDataViewModel.cs",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\ViewModel\\BookDataViewModel.cs",
+              "RelativeDocumentMoniker": "BookApi\\ViewModel\\BookDataViewModel.cs",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BookApi\\ViewModel\\BookDataViewModel.cs",
+              "RelativeToolTip": "BookApi\\ViewModel\\BookDataViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T15:52:32.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Layout\\MainLayout.razor",
-              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Title": "ModifyBookPage.razor",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\ModifyBookPage.razor",
+              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Pages\\ModifyBookPage.razor",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\ModifyBookPage.razor",
+              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Pages\\ModifyBookPage.razor",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T12:32:25.862Z"
+              "WhenOpened": "2024-12-01T15:08:50.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookDetailPage.razor",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookDetailPage.razor",
+              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookDetailPage.razor",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookDetailPage.razor",
+              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookDetailPage.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T15:05:59.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookManage.razor",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
+              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
+              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookManage.razor",
+              "ViewState": "AgIAAMQAAAAAAAAAAIAywM8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-28T08:18:49.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookLendRecordPage.razor",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookLendRecordPage.razor",
+              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookLendRecordPage.razor",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\BookLendRecordPage.razor",
+              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Pages\\BookLendRecordPage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T02:40:45.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditBookPage.razor",
+              "DocumentMoniker": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\EditBookPage.razor",
+              "RelativeDocumentMoniker": "BlazorRadzenRestfulBookApp\\Components\\Pages\\EditBookPage.razor",
+              "ToolTip": "D:\\Jack_Data\\Download\\2024\u8077\u8A13\\\u53E1\u694A\u6559\u6750\\Course4_NET_MVC\\Workshop\\source\\GitMvcWorkshop\\BookMvcWorkshop\\BlazorRadzenRestfulBookApp\\Components\\Pages\\EditBookPage.razor",
+              "RelativeToolTip": "BlazorRadzenRestfulBookApp\\Components\\Pages\\EditBookPage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T13:51:56.909Z",
+              "EditorCaption": ""
             }
           ]
         }

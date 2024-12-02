@@ -31,12 +31,12 @@
     <RadzenHeader>
         <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
             <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
-            <RadzenLabel class="rz-text-h4 rz-pt-1 text-white mb-2" Text="XXX圖書管理系統_Blazor版本" />
+            <RadzenLabel class="rz-text-h5 rz-pt-1 text-white mb-2" Text="XXX圖書管理系統_Blazor版本" />
         </RadzenStack>
     </RadzenHeader>
     <RadzenSidebar Responsive="false" Style="width: max-content">
         <RadzenPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false">
-            <RadzenPanelMenuItem Text="Overview" Icon="home" />
+            <RadzenPanelMenuItem Text="Overview" Icon="home" Path="/" />
 @*             <RadzenPanelMenuItem Text="Dashboard" Icon="dashboard" />
             <RadzenPanelMenuItem Text="UI Fundamentals" Icon="auto_awesome">
                 <RadzenPanelMenuItem Text="Themes" Icon="color_lens" />

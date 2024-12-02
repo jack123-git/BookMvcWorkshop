@@ -1,0 +1,161 @@
+﻿@page "/modifybookpage/{BookID}"
+@using System.ComponentModel.DataAnnotations
+@rendermode RenderMode.InteractiveServer
+@inject IBookRepository bookRepository
+@inject DialogService dialogService
+@* @inject NotificationService NotificationService *@
+
+
+<RadzenStack Orientation="Orientation.Vertical" JustifyContent="JustifyContent.SpaceBetween" Style="max-width: 760px;height: 100%;">
+    <RadzenTemplateForm TItem="BookData" Data=@book Submit=@OnSubmit InvalidSubmit=@OnInvalidSubmit>
+        <RadzenStack class="mb-4">
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="*" class="text-danger" Style="display:inline-block" />
+                    <RadzenText Text="書名" Component="BookName" class="pt-2" Style="display:inline-block" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenTextBox Placeholder="輸入書名" @bind-Value=@book.BOOK_NAME Name="BookName" Style="width: 100%" aria-label="TextBox with placeholder" />                    
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookName" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="作者" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenTextBox Placeholder="輸入作者名" @bind-Value=@book.BOOK_AUTHOR Name="BookAuthor" Style="width: 100%" aria-label="TextBox with placeholder" />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookAuthor" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter ">
+                    <RadzenText Text="出版商" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenTextBox Placeholder="輸入出版商" @bind-Value=@book.BOOK_PUBLISHER Name="BookPublisher" Style="width: 100%" aria-label="TextBox with placeholder" />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookPublisher" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="內容簡介" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenTextArea @bind-Value=@book.BOOK_NOTE Rows="3" Name="BookNote" Style="width: 100%" aria-label="TextArea with 3 rows and 30 columns" />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookNote" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="購書日期" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenDatePicker @bind-Value=@book.BOOK_BOUGHT_DATE Name="BookBoughtDate" DateFormat="yyyy/MM/dd" ShowCalendarWeek />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookBoughtDate" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="圖書類別" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenDropDown @bind-Value=@book.BOOK_CLASS_ID ValueProperty="BOOK_CLASS_ID" TextProperty="BOOK_CLASS_NAME" Data=@bookClassList Style="width: 100%; max-width: 400px;" Name="BookClassId" />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookClassId" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="借閱狀態" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenDropDown @bind-Value=@book.BOOK_STATUS ValueProperty="BOOK_STATUS_ID" TextProperty="BOOK_STATUS_NAME" Data=@bookStatusList Style="width: 100%; max-width: 400px;" Name="BookStatus" />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">
+                    <RadzenDataAnnotationValidator Component="BookStatus" Popup=@popup Style="position: absolute" />
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow Gap="0.5rem">
+                <RadzenColumn Size="2" class="rz-text-align-right rz-color-on-info-lighter">
+                    <RadzenText Text="借閱人" class="pt-2" />
+                </RadzenColumn>
+                <RadzenColumn Size="7" class="rz-color-on-info-lighter">
+                    <RadzenDropDown @bind-Value=@book.BOOK_KEEPER ValueProperty="USER_ID" TextProperty="USER_Name" Data=@memberList Style="width: 100%; max-width: 400px;" Name="BookKeeper" />
+                </RadzenColumn>
+                <RadzenColumn Size="3" class="pt-2">                    
+                </RadzenColumn>
+            </RadzenRow>
+        </RadzenStack>
+
+        <RadzenStack Visible="@ShowClose" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem" >
+            <RadzenButton ButtonType="ButtonType.Submit" Text="儲存" Variant="Variant.Flat" Icon="save" Style="width: 80px" class="rz-border-radius-10 text-white rz-background-color-success p-2"></RadzenButton>
+            @* <RadzenButton Click="@((args) => dialogService.Close(true))" Variant="Variant.Flat" Icon="save" Text="儲存" Style="width: 80px" class="rz-border-radius-10 text-white rz-background-color-success p-2" /> *@
+            <RadzenButton Click="@((args) => dialogService.Close(false))" Variant="Variant.Flat" Icon="close" Text="關閉" Style="width: 80px" class="rz-border-radius-10 text-white rz-background-color-warning p-2" />
+        </RadzenStack>
+    </RadzenTemplateForm>
+</RadzenStack>
+
+@code {
+    [Parameter] public int BookID { get; set; }
+    [Parameter] public bool ShowClose { get; set; } = true;
+
+    private List<BookClass> bookClassList = new List<BookClass>();
+    private List<BookStatus> bookStatusList = new List<BookStatus>();
+    private List<Member> memberList { get; set; } = new List<Member>();
+
+    private BookData book = new BookData() { BOOK_NAME="", BOOK_CLASS_ID="", BOOK_STATUS="", BOOK_KEEPER="" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        bookClassList = ((IEnumerable<BookClass>)await bookRepository.GetAllBookClassAsync()).ToList();
+        bookStatusList = ((IEnumerable<BookStatus>)await bookRepository.GetAllBookStatusAsync()).ToList();
+        memberList = ((IEnumerable<Member>)await bookRepository.GetAllMemberAsync()).ToList();
+    }
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+
+        book = await bookRepository.GetBookDataByIdAsync(BookID);
+
+    }
+
+}
+
+@code {
+    bool popup = false;
+
+    async void OnSubmit(BookData book)
+    {
+        //console.Log($"Submit: {JsonSerializer.Serialize(model, new JsonSerializerOptions() { WriteIndented = true })}");
+        var result = await bookRepository.UpdateBookDataAsync(book);
+        // if (result.ResultCode > 0)
+        // {
+        //     NotificationMessage message = new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "通知", Detail = $"更新圖書資料成功!", Duration = 4000 };
+        //     NotificationService.Notify(message);
+        //     dialogService.Close(true);
+
+        // }        
+        // else
+        //     dialogService.Close(false);
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        //console.Log($"InvalidSubmit: {JsonSerializer.Serialize(args, new JsonSerializerOptions() { WriteIndented = true })}");
+    }
+
+}

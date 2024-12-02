@@ -1,0 +1,43 @@
+﻿@page "/bookdetailpage/{BookID:int}"
+@rendermode RenderMode.InteractiveServer
+@inject IBookRepository bookRepository
+@inject Radzen.DialogService dialogService
+
+<h3>BookDetailPage</h3>
+
+<RadzenStack Gap="1rem" Orientation="Orientation.Vertical" JustifyContent="JustifyContent.SpaceBetween" Style="height: 100%;">
+    <RadzenStack>
+        <RadzenRow>
+            @if (book != null)
+            {
+                <RadzenColumn Size="12" SizeMD="6" class="rz-p-4 rz-border-radius-1" Style="border: var(--rz-grid-cell-border)">
+                    <RadzenText TextStyle="TextStyle.Subtitle1">Contact</RadzenText>
+                    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                        <RadzenStack Gap="0" class="rz-text-truncate">
+                            <RadzenText TextStyle="TextStyle.Overline" class="rz-mt-2 rz-my-0" Style="color: var(--rz-text-tertiary-color);">書籍名稱</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-text-truncate"><b>@(book.BOOK_NAME)</b></RadzenText>
+                            <RadzenText TextStyle="TextStyle.Overline" class="rz-mt-4 rz-mb-0" Style="color: var(--rz-text-tertiary-color);">書籍類別</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-text-truncate"><b>@book.BOOK_CLASS_ID</b></RadzenText>
+                        </RadzenStack>
+                    </RadzenStack>
+                </RadzenColumn>                
+            }
+        </RadzenRow>
+    </RadzenStack>
+    <RadzenStack Visible="@ShowClose" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
+        <RadzenButton Click="@((args) => dialogService.Close(true))" Variant="Variant.Flat" Text="Close" Style="width: 120px" />
+    </RadzenStack>
+</RadzenStack>
+
+@code {
+    [Parameter] public int BookID { get; set; }
+    public bool ShowClose { get; set; } = true;
+
+    public BookData book { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // await base.OnParametersSetAsync();
+        book = await bookRepository.GetBookDataByIdAsync(BookID);
+    }
+}

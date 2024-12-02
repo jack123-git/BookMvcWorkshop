@@ -1,0 +1,42 @@
+﻿@page "/booklendrecordpage/{bookid:int}"
+@rendermode RenderMode.InteractiveServer
+@inject IBookRepository bookRepository
+
+
+<RadzenCard class="rz-my-1 rz-mx-auto" Style="max-width: 500px">
+    <h5>@bookid @book.BOOK_NAME</h5>
+
+    @if (bookLends != null)
+    {
+        <RadzenDataGrid class="mt-3" AllowFiltering="false" AllowColumnResize="false" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="false" PageSize="10" AllowPaging="false" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="false"
+                        Data="@bookLends" TItem="BookLendViewModel" ColumnWidth="500px" LogicalFilterOperator="LogicalFilterOperator.Or" AllowVirtualization="true">
+            <EmptyTemplate>
+                <p style="color: lightgrey; font-size: 24px; text-align: center; margin: 2rem;">查無資料</p>
+            </EmptyTemplate>
+            <Columns>
+                <RadzenDataGridColumn Property="@nameof(BookLendViewModel.LEND_DATE)" Filterable="false" Title="借閱日期" Frozen="true" Width="100px" FormatString="{0:d}" TextAlign="TextAlign.Left" />
+                <RadzenDataGridColumn Property="@nameof(BookLendViewModel.USER_ID)" Filterable="false" Title="借閱人員編號" Frozen="true" Width="100px" TextAlign="TextAlign.Center" />
+                <RadzenDataGridColumn Property="@nameof(BookLendViewModel.USER_ENAME)" Filterable="false" Title="英文姓名" Frozen="true" Width="100px" TextAlign="TextAlign.Center" />
+                <RadzenDataGridColumn Property="@nameof(BookLendViewModel.USER_CNAME)" Filterable="false" Title="中文姓名" Frozen="true" Width="100px" TextAlign="TextAlign.Center" />
+            </Columns>
+        </RadzenDataGrid>
+    }
+</RadzenCard>
+
+
+
+@code {
+    [Parameter]
+    public int bookid { get; set; }
+
+    private BookData book = new BookData() { BOOK_NAME = "", BOOK_CLASS_ID = "", BOOK_STATUS = "A", BOOK_KEEPER = "" };
+
+    private List<BookLendViewModel> bookLends;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        book = await bookRepository.GetBookDataByIdAsync(bookid);
+        bookLends = await bookRepository.GetBookLendRecordAsync(bookid);
+    }
+
+}
