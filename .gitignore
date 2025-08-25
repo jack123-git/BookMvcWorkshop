@@ -134,3 +134,8 @@ _NCrunch*
 
 *.vsidx
 *.bin
+/.vs/DapperMvcWorkshop/DesignTimeBuild/.dtbcache.v2
+/.vs/DapperMvcWorkshop/v17/DocumentLayout.json
+/.vs/DapperMvcWorkshop/v17/DocumentLayout.backup.json
+/.vs/DapperMvcWorkshop/v17/.futdcache.v2
+*.json
